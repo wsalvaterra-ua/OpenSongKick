@@ -13,11 +13,11 @@ public class VenueSearch {
         this.venueSearchCaller = venueSearchCaller;
     }
 
-    public ApiCaller<ResultsPage<Venue>> byName(String query) {
+    public ApiCaller<ResultsPage<Venue>> byQuery(String query) {
         return new ApiCaller<>(venueSearchCaller.byQuery(query));
     }
 
-    public ApiCaller<ResultsPage<Venue>> byName(String query, Param... params) {
+    public ApiCaller<ResultsPage<Venue>> byQuery(String query, Param... params) {
         return new ApiCaller<>(venueSearchCaller.byQuery(query, ParamsConverter.asMap(params)));
     }
 

@@ -23,11 +23,11 @@ public class LocationSearch {
     }
 
     public ApiCaller<ResultsPage<Location>> byLocation(LocationParam location) {
-        return new ApiCaller<>(locationSearchCaller.byQuery(location.toString()));
+        return new ApiCaller<>(locationSearchCaller.byLocation(location.toString()));
     }
 
     public ApiCaller<ResultsPage<Location>> byLocation(LocationParam location, Param... params) {
-        return new ApiCaller<>(locationSearchCaller.byQuery(location.toString(), ParamsConverter.asMap(params)));
+        return new ApiCaller<>(locationSearchCaller.byLocation(location.toString(), ParamsConverter.asMap(params)));
     }
 
 }

@@ -22,11 +22,11 @@ public class EventSearch {
         return new ApiCaller<>(eventSearchCaller.byArtist(artistName, ParamsConverter.asMap(params)));
     }
 
-    public ApiCaller<ResultsPage<Event>> byArtist(LocationParam location) {
+    public ApiCaller<ResultsPage<Event>> byLocation(LocationParam location) {
         return new ApiCaller<>(eventSearchCaller.byLocation(location.toString()));
     }
 
-    public ApiCaller<ResultsPage<Event>> byArtist(LocationParam location, Param... params) {
+    public ApiCaller<ResultsPage<Event>> byLocation(LocationParam location, Param... params) {
         return new ApiCaller<>(eventSearchCaller.byLocation(location.toString(), ParamsConverter.asMap(params)));
     }
 
