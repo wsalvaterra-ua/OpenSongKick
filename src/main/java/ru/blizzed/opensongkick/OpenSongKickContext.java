@@ -66,9 +66,9 @@ public class OpenSongKickContext {
     }
 
     /**
-     * Returns a full URL to the Last.FM API service as {@link String}
+     * Returns a full URL to the SongKick API service as {@link String}
      *
-     * @return full URL to Last.FM API
+     * @return full URL to SongKick API
      */
     public String getRootUrl() {
         checkInit();

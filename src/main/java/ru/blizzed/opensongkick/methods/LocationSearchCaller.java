@@ -18,4 +18,10 @@ public interface LocationSearchCaller {
     @GET("/search/locations.json")
     Call<ResultsPage<Location>> byQuery(@Query("query") String query, @QueryMap Map<String, String> queryMap);
 
+    @GET("/search/locations.json")
+    Call<ResultsPage<Location>> byLocation(@Query("location") String query);
+
+    @GET("/search/locations.json")
+    Call<ResultsPage<Location>> byLocation(@Query("location") String query, @QueryMap Map<String, String> queryMap);
+
 }
