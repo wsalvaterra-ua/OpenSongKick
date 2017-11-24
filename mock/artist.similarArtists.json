@@ -1,0 +1,23 @@
+{
+  "resultsPage": {
+    "results": {
+      "artist": [
+        {
+          "displayName": "Gorillaz",
+          "id": 68043,
+          "identifier": [
+            {
+              "eventsHref": "http://api.songkick.com/api/3.0/artists/mbid:e21857d5-3256-4547-afb3-4b6ded592596/calendar.json",
+              "href": "http://api.songkick.com/api/3.0/artists/mbid:e21857d5-3256-4547-afb3-4b6ded592596.json",
+              "mbid": "e21857d5-3256-4547-afb3-4b6ded592596",
+              "setlistsHref": "http://api.songkick.com/api/3.0/artists/mbid:e21857d5-3256-4547-afb3-4b6ded592596/setlists.json"
+            }
+          ],
+          "onTourUntil": null,
+          "uri": "http://www.songkick.com/artists/68043-gorillaz?utm_source=1976&utm_medium=partner"
+        }
+      ]
+    },
+    "status": "ok"
+  }
+}
