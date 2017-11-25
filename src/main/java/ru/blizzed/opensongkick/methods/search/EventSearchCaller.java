@@ -1,10 +1,9 @@
-package ru.blizzed.opensongkick.methods;
+package ru.blizzed.opensongkick.methods.search;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
-import ru.blizzed.opensongkick.models.Artist;
 import ru.blizzed.opensongkick.models.Event;
 import ru.blizzed.opensongkick.models.ResultsPage;
 

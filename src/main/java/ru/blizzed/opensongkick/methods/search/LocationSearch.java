@@ -1,5 +1,6 @@
-package ru.blizzed.opensongkick.methods;
+package ru.blizzed.opensongkick.methods.search;
 
+import ru.blizzed.opensongkick.ApiCaller;
 import ru.blizzed.opensongkick.models.Location;
 import ru.blizzed.opensongkick.models.ResultsPage;
 import ru.blizzed.opensongkick.params.LocationParam;
@@ -10,7 +11,7 @@ public class LocationSearch {
 
     private LocationSearchCaller locationSearchCaller;
 
-    LocationSearch(LocationSearchCaller locationSearchCaller) {
+    public LocationSearch(LocationSearchCaller locationSearchCaller) {
         this.locationSearchCaller = locationSearchCaller;
     }
 

@@ -1,4 +1,4 @@
-package ru.blizzed.opensongkick.methods;
+package ru.blizzed.opensongkick.methods.search;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

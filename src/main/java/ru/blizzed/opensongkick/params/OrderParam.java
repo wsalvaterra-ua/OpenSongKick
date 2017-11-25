@@ -1,6 +1,6 @@
 package ru.blizzed.opensongkick.params;
 
-public class OrderParam extends Param<OrderParam.Type> {
+public class OrderParam extends EnumParam<OrderParam.Type> {
 
     public enum Type {
         DESC, ASC
@@ -9,5 +9,6 @@ public class OrderParam extends Param<OrderParam.Type> {
     public OrderParam() {
         super("order");
     }
+
 
 }

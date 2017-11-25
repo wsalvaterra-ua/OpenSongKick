@@ -22,11 +22,11 @@ import ru.blizzed.opensongkick.models.Error;
  *
  * @author BlizzedRu
  */
-public class ApiResponseException extends Exception {
+public class ApiErrorException extends Exception {
 
     private Error error;
 
-    public ApiResponseException(Error error) {
+    public ApiErrorException(Error error) {
         this.error = error;
     }
 

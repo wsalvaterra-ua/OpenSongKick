@@ -1,16 +1,13 @@
-package ru.blizzed.opensongkick.methods;
+package ru.blizzed.opensongkick;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import ru.blizzed.opensongkick.ApiCallException;
-import ru.blizzed.opensongkick.ApiResponseException;
-import ru.blizzed.opensongkick.OpenSongKickContext;
 import ru.blizzed.opensongkick.models.Error;
 
 import java.io.IOException;
 
-public class ApiCaller<ResultType> {
+public final class ApiCaller<ResultType> {
 
     public interface Listener<ResultType> {
         default void onComplete(ResultType result, ApiCaller<ResultType> apiCaller) {
@@ -23,16 +20,16 @@ public class ApiCaller<ResultType> {
 
     private Call<ResultType> call;
 
-    ApiCaller(Call<ResultType> call) {
+    public ApiCaller(Call<ResultType> call) {
         this.call = call;
     }
 
-    public ResultType execute() throws ApiCallException, ApiResponseException {
+    public ResultType execute() throws ApiCallException, ApiErrorException {
         try {
             Response<ResultType> response = call.execute();
             if (response.isSuccessful())
                 return response.body();
-            else throw new ApiResponseException(parseError(response));
+            else throw new ApiErrorException(parseError(response));
         } catch (IOException e) {
             throw new ApiCallException(e);
         }
@@ -57,6 +54,11 @@ public class ApiCaller<ResultType> {
                 listener.onFailure(new ApiCallException(throwable), ApiCaller.this);
             }
         });
+    }
+
+    public void cancel() {
+        if (!call.isCanceled() & !call.isExecuted())
+            call.cancel();
     }
 
     private Error parseError(Response response) throws IOException {

@@ -1,5 +1,6 @@
-package ru.blizzed.opensongkick.methods;
+package ru.blizzed.opensongkick.methods.search;
 
+import ru.blizzed.opensongkick.ApiCaller;
 import ru.blizzed.opensongkick.models.Artist;
 import ru.blizzed.opensongkick.models.ResultsPage;
 import ru.blizzed.opensongkick.params.Param;
@@ -9,7 +10,7 @@ public class ArtistSearch {
 
     private ArtistSearchCaller artistSearchCaller;
 
-    ArtistSearch(ArtistSearchCaller artistSearchCaller) {
+    public ArtistSearch(ArtistSearchCaller artistSearchCaller) {
         this.artistSearchCaller = artistSearchCaller;
     }
 

@@ -1,5 +1,6 @@
-package ru.blizzed.opensongkick.methods;
+package ru.blizzed.opensongkick.methods.search;
 
+import ru.blizzed.opensongkick.ApiCaller;
 import ru.blizzed.opensongkick.models.ResultsPage;
 import ru.blizzed.opensongkick.models.Venue;
 import ru.blizzed.opensongkick.params.Param;
@@ -9,7 +10,7 @@ public class VenueSearch {
 
     private VenueSearchCaller venueSearchCaller;
 
-    VenueSearch(VenueSearchCaller venueSearchCaller) {
+    public VenueSearch(VenueSearchCaller venueSearchCaller) {
         this.venueSearchCaller = venueSearchCaller;
     }
 

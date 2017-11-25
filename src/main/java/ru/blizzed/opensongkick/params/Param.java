@@ -31,7 +31,7 @@ import java.util.Objects;
 public class Param<DataType> implements Cloneable {
 
     private String name;
-    private DataType[] data;
+    protected DataType[] data;
 
     public Param(String name) {
         this.name = name;

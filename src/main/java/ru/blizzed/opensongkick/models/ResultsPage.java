@@ -28,6 +28,10 @@ public class ResultsPage<ResultType> {
         return container.status;
     }
 
+    public boolean isPaginated() {
+        return container.totalEntries > 0;
+    }
+
     private static class Container<ResultType> {
         private int totalEntries;
         private int perPage;
@@ -39,7 +43,6 @@ public class ResultsPage<ResultType> {
             @SerializedName(value = "artist", alternate = {"event", "location", "venue"})
             List<ResultType> content;
         }
-
     }
 
 }
