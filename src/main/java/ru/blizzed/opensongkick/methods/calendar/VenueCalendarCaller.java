@@ -11,10 +11,10 @@ import java.util.Map;
 
 public interface VenueCalendarCaller {
 
-    @GET("/venues/{venue_id}/calendar.json")
+    @GET("venues/{venue_id}/calendar.json")
     Call<ResultsPage<Event>> byId(@Path("venue_id") String id);
 
-    @GET("/venues/{venue_id}/calendar.json")
+    @GET("venues/{venue_id}/calendar.json")
     Call<ResultsPage<Event>> byId(@Path("venue_id") String id, @QueryMap Map<String, String> queries);
 
 }

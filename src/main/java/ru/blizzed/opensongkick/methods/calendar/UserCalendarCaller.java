@@ -12,16 +12,16 @@ import java.util.Map;
 
 public interface UserCalendarCaller {
 
-    @GET("/users/{username}/calendar.json")
+    @GET("users/{username}/calendar.json")
     Call<ResultsPage<CalendarEntry>> byNameWithReason(@Path("username") String username, @Query("reason") String reason);
 
-    @GET("/users/{username}/calendar.json")
+    @GET("users/{username}/calendar.json")
     Call<ResultsPage<CalendarEntry>> byNameWithReason(@Path("username") String username, @Query("reason") String reason, @QueryMap Map<String, String> queries);
 
-    @GET("/users/{username}/calendar.json")
+    @GET("users/{username}/calendar.json")
     Call<ResultsPage<CalendarEntry>> byName(@Path("username") String username);
 
-    @GET("/users/{username}/calendar.json")
+    @GET("users/{username}/calendar.json")
     Call<ResultsPage<CalendarEntry>> byName(@Path("username") String username, @QueryMap Map<String, String> queries);
 
 }

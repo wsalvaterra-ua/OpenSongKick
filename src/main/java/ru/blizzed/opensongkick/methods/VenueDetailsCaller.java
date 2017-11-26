@@ -8,7 +8,7 @@ import ru.blizzed.opensongkick.models.Venue;
 
 public interface VenueDetailsCaller {
 
-    @GET("/venues/{venue_id}.json")
+    @GET("venues/{venue_id}.json")
     Call<Result<Venue>> byId(@Path("venue_id") String venueId);
 
 }

@@ -11,10 +11,10 @@ import java.util.Map;
 
 public interface UserGigographyCaller {
 
-    @GET("/users/{username}/gigography.json")
+    @GET("users/{username}/gigography.json")
     Call<ResultsPage<Event>> byName(@Path("username") String username);
 
-    @GET("/users/{username}/gigography.json")
+    @GET("users/{username}/gigography.json")
     Call<ResultsPage<Event>> byName(@Path("username") String username, @QueryMap Map<String, String> queries);
 
 }

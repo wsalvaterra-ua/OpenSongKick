@@ -12,16 +12,16 @@ import java.util.Map;
 
 public interface ArtistCalendarCaller {
 
-    @GET("/artists/{artist_id}/calendar.json")
+    @GET("artists/{artist_id}/calendar.json")
     Call<ResultsPage<Event>> byId(@Path("artist_id") String id);
 
-    @GET("/artists/{artist_id}/calendar.json")
+    @GET("artists/{artist_id}/calendar.json")
     Call<ResultsPage<Event>> byId(@Path("artist_id") String id, @QueryMap Map<String, String> queries);
 
-    @GET("/artists/mbid:{mbid}/calendar.json")
+    @GET("artists/mbid:{mbid}/calendar.json")
     Call<ResultsPage<Event>> byMbid(@Query("mbid") String mbid);
 
-    @GET("/artists/mbid:{mbid}/calendar.json")
+    @GET("artists/mbid:{mbid}/calendar.json")
     Call<ResultsPage<Event>> byMbid(@Query("mbid") String mbid, @QueryMap Map<String, String> queries);
 
 }

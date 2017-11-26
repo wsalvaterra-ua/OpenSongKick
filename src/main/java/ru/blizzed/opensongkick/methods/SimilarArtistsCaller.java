@@ -8,7 +8,7 @@ import ru.blizzed.opensongkick.models.ResultsPage;
 
 public interface SimilarArtistsCaller {
 
-    @GET("/artists/{artist_id}/similar_artists.json")
+    @GET("artists/{artist_id}/similar_artists.json")
     Call<ResultsPage<Artist>> byId(@Path("artist_id") String artistId);
 
 }

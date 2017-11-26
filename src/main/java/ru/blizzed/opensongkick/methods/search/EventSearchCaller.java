@@ -11,16 +11,16 @@ import java.util.Map;
 
 public interface EventSearchCaller {
 
-    @GET("/events.json")
+    @GET("events.json")
     Call<ResultsPage<Event>> byArtist(@Query("artist_name") String artistName);
 
-    @GET("/events.json")
+    @GET("events.json")
     Call<ResultsPage<Event>> byArtist(@Query("artist_name") String artistName, @QueryMap Map<String, String> queryMap);
 
-    @GET("/events.json")
+    @GET("events.json")
     Call<ResultsPage<Event>> byLocation(@Query("location") String location);
 
-    @GET("/events.json")
+    @GET("events.json")
     Call<ResultsPage<Event>> byLocation(@Query("location") String location, @QueryMap Map<String, String> queryMap);
 
 }
