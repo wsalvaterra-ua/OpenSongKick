@@ -10,6 +10,7 @@ public class LocationParam<T> extends Param<T> {
 
     public LocationParam(Type type) {
         super("location");
+        this.type = type;
     }
 
     public Type getType() {

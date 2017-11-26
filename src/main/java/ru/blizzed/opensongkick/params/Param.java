@@ -59,6 +59,7 @@ public class Param<DataType> implements Cloneable {
 
     @Override
     public String toString() {
+        if (data == null || data.length == 0) return "";
         StringBuilder sb = new StringBuilder();
         Arrays.stream(data).forEach(d -> sb.append(d.toString().toLowerCase()).append(","));
         return sb.deleteCharAt(sb.length() - 1).toString();
