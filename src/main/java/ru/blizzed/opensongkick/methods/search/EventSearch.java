@@ -23,7 +23,6 @@ public class EventSearch {
     }
 
     public ApiCaller<ResultsPage<Event>> byLocation(Param location) {
-        System.out.println(eventSearchCaller.byLocation(location.toString()).request().toString());
         return new ApiCaller<>(eventSearchCaller.byLocation(location.toString()));
     }
 

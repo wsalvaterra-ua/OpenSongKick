@@ -19,25 +19,23 @@ public class OpenSongKickContext {
     private static OpenSongKickContext instance;
     private String apiKey;
 
-    private static Retrofit retrofit;
+    private Retrofit retrofit;
 
     private OpenSongKickContext(String apiKey) {
-        HttpUrl url = HttpUrl.parse(ROOT_URL).newBuilder()
-                .addQueryParameter("apikey", apiKey)
-                .build();
-        OkHttpClient defaultHttpClient = new OkHttpClient.Builder()
-                .addInterceptor(chain -> {
-                    Request request = chain.request().newBuilder()
-                            .url(url)
-                            .build();
+        this.apiKey = apiKey;
+        OkHttpClient httpClient = new OkHttpClient.Builder()
+                .addInterceptor((chain -> {
+                    Request request = chain.request();
+                    HttpUrl url = request.url().newBuilder().addQueryParameter("apikey", apiKey).build();
+                    request = request.newBuilder().url(url).build();
                     return chain.proceed(request);
-                })
+                }))
                 .build();
 
         retrofit = new Retrofit.Builder()
                 .baseUrl(ROOT_URL)
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(defaultHttpClient)
+                .client(httpClient)
                 .build();
     }
 
