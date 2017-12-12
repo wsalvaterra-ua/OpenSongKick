@@ -1,6 +1,6 @@
 package ru.blizzed.opensongkick.models;
 
-public class MetroArea extends BaseModel {
+public class MetroArea extends LocationBaseModel {
 
     private SimpleBaseModel country;
     private SimpleBaseModel state;
