@@ -1,6 +1,8 @@
 package ru.blizzed.opensongkick.models;
 
 import com.google.gson.annotations.SerializedName;
+
+import java.util.Collections;
 import java.util.List;
 
 public class ResultsPage<ResultType> {
@@ -9,6 +11,8 @@ public class ResultsPage<ResultType> {
     private Container<ResultType> container;
 
     public List<ResultType> getResults() {
+        if (container.results.content == null)
+            return Collections.emptyList();
         return container.results.content;
     }
 
