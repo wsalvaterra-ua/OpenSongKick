@@ -16,6 +16,8 @@
 
 package ru.blizzed.opensongkick.params;
 
+import ru.blizzed.opensongkick.models.Event;
+
 /**
  * Common parameters for SongKick API methods
  *
@@ -42,6 +44,10 @@ public final class SongKickParams {
 
     public static final DateParam MIN_DATE = new DateParam("min_date");
     public static final DateParam MAX_DATE = new DateParam("max_date");
+
+    public static final Param<String> ARTIST_NAME = new Param<>("artist_name");
+
+    public static final Param<Event.Type> TYPE = new Param<>("type");
 
 
 }
