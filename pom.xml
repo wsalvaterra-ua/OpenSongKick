@@ -6,7 +6,7 @@
 
     <groupId>ru.blizzed</groupId>
     <artifactId>OpenSongKick</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>OpenSongKick</name>
     <description>Simple Java library for non-auth methods of Songkick.com API</description>

@@ -21,7 +21,7 @@ In your pom.xml inside the *\<dependencies>* tag
     <dependency>
         <groupId>ru.blizzed</groupId>
         <artifactId>opensongkick</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </dependency>
 </dependencies>
 ```
@@ -34,7 +34,7 @@ In your build.gradle file inside the *dependencies* section
 ``` 
 dependencies {
    ...
-   implementation 'ru.blizzed:opensongkick:1.0.1'
+   implementation 'ru.blizzed:opensongkick:1.0.2'
 }
 ```
   
@@ -42,7 +42,7 @@ dependencies {
 ``` 
 dependencies {
     ...
-    compile 'ru.blizzed:opensongkick:1.0.1'
+    compile 'ru.blizzed:opensongkick:1.0.2'
 }
 ```
   
