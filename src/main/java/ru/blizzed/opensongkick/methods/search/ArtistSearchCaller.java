@@ -12,9 +12,9 @@ import java.util.Map;
 public interface ArtistSearchCaller {
 
     @GET("search/artists.json")
-    Call<ResultsPage<Artist>> byName(@Query("name") String name);
+    Call<ResultsPage<Artist>> byName(@Query("query") String name);
 
     @GET("search/artists.json")
-    Call<ResultsPage<Artist>> byName(@Query("name") String name, @QueryMap Map<String, String> queryMap);
+    Call<ResultsPage<Artist>> byName(@Query("query") String name, @QueryMap Map<String, String> queryMap);
 
 }
